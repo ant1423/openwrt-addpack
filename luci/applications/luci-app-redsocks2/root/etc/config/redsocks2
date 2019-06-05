@@ -1,0 +1,8 @@
+config redsocks2
+        option enable 0
+        option local_port 7070
+        option proxy_type SOCKS5
+        option proxy_ip 1.2.3.4
+        option proxy_port 80
+        option auto_proxy 1
+        option timeout 5

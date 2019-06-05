@@ -1,0 +1,66 @@
+#!/bin/sh
+
+BASE_NAME=`basename $0`
+minval=10
+frequency=30
+pidfile="/var/run/${BASE_NAME}.pid"
+
+. /lib/functions.sh
+
+usage()
+{
+	echo -e "\n\tUsage: ${BASE_NAME} [options]"
+	echo -e "\t${BASE_NAME} is a tool for automatic memory cleanup.\n"
+	echo "Options:"
+	echo -e "\t-h, --help			This help text."
+	echo -e "\t-m, --minval			The minimum value of total memory."
+	echo -e "\t-f, --frequency		Check frequency(unit: second)."
+	echo -e "\t-p, --pidfile\t		The pid file.\n"
+	exit 1
+}
+
+
+
+while getopts f:m:p:h option; do
+	case "$option" in
+		f)
+			frequency=$OPTARG
+	;;
+		h)
+			usage
+	;;
+		m)
+			minval=$OPTARG
+	;;
+		p)
+			pidfile=$OPTARG
+	;;
+		\?)
+			usage
+	;;
+	esac
+done
+
+if [ -z "$pidfile" ]; then
+	echo "The pid file cannot be empty."
+	exit 1
+fi
+
+[ -f $pidfile ] && grep -q $BASE_NAME /proc/`cat $pidfile`/cmdline > /dev/null 2>&1 && {
+	echo "Already running."
+	exit 1
+}
+echo $$ > $pidfile
+
+echo "start monitoring memory..."
+total=`free -m | grep Mem: | awk '{print $2}'`
+critical=$((total * $minval / 100))
+while :; do
+	actual=`free -m | grep buffers: | awk '{print $NF}'`
+	if [ $actual -lt $critical ]; then
+		sync; sync
+		sleep 1
+		echo 3 > /proc/sys/vm/drop_caches
+	fi
+	sleep $frequency
+done

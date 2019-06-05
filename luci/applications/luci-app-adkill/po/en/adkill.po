@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-11\n"
+"PO-Revision-Date: 2015-11-11 00:04+0800\n"
+"Last-Translator: twxl1993 <twxl1993@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.1\n"
+
+msgid "Ad-Killer"
+msgstr "Ad-Killer"
+
+msgid "A kernel module which can be configured to remove advertisements in some video sites."
+msgstr "A kernel module which can be configured to remove advertisements in some video sites."
+
+msgid "Basic Settings"
+msgstr "Basic Settings"
+
+msgid "Destination Host"
+msgstr "Destination Host"
+
+msgid "Destination URI"
+msgstr "Destination URI"
+
+msgid "Enable Ad-Killer"
+msgstr "Enable Ad-Killer"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Keyword"
+msgstr "Keyword"
+
+msgid "Rules - 302"
+msgstr "Rules - 302"
+
+msgid "Rules - 404"
+msgstr "Rules - 404"
+
+msgid "Rules - 502"
+msgstr "Rules - 502"
+
+msgid "Rules - Redirect"
+msgstr "Rules - Redirect"
+
+msgid "Rules - Fake Package"
+msgstr "Rules - Fake Package"
+
+msgid "Rules - Modifying"
+msgstr "Rules - Modifying"
+
+msgid "Source Host"
+msgstr "Source Host"
+
+msgid "Source URI"
+msgstr "Source URI"
+
+msgid "URI"
+msgstr "URI"
+
+msgid "Value"
+msgstr "Value"
+
+msgid "A part of the request URI (after the Keyword) will be replaced with the Value."
+msgstr "A part of the request URI (after the Keyword) will be replaced with the Value."
+
+msgid "The requests which match the rule will be blocked with \"404 Not Found\" error."
+msgstr "The requests which match the rule will be blocked with \"404 Not Found\" error."
+
+msgid "The requests which match the rule will be blocked with \"502 Bad Gateway\" error."
+msgstr "The requests which match the rule will be blocked with \"502 Bad Gateway\" error."
+
+msgid "The requests which match the source URI will be redirected to the destination URI.This rule is usually used to replace the flash player on the website."
+msgstr "The requests which match the source URI will be redirected to the destination URI.This rule is usually used to replace the flash player on the website."
+
+msgid "Send a fake reply for the requests which match the source URI."
+msgstr "Send a fake reply for the requests which match the source URI."

@@ -1,0 +1,331 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mwan translate\n"
+"PO-Revision-Date: 2015-11-13 14:15+0800\n"
+"Last-Translator: twxl1993 <twxl1993@gmail.com>\n"
+"Language-Team: GuoGuo <gch981213@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+"POT-Creation-Date: \n"
+
+msgid "Load Balancing"
+msgstr "Load Balancing"
+
+msgid "Interface Status"
+msgstr "Interface Status"
+
+msgid "Detailed Status"
+msgstr "Detailed Status"
+
+msgid "Advanced"
+msgstr "Advanced"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "Policies"
+msgstr "Policies"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "Hotplug Script"
+msgstr "Hotplug Script"
+
+msgid "MWAN Config"
+msgstr "MWAN Config"
+
+msgid "Network Config"
+msgstr "Network Config"
+
+msgid "Troubleshooting"
+msgstr "Troubleshooting"
+
+msgid "MWAN Interface Live Status"
+msgstr "MWAN Interface Live Status"
+
+msgid "MWAN Interface Systemlog"
+msgstr "MWAN Interface Systemlog"
+
+msgid "MWAN Detailed Status"
+msgstr "MWAN Detailed Status"
+
+msgid "MWAN Interface Configuration"
+msgstr "MWAN Interface Configuration"
+
+msgid "Interface"
+msgstr "Interface"
+
+msgid ""
+"MWAN supports up to 250 physical and/or logical interfaces<br />MWAN "
+"requires that all interfaces have a unique metric configured in /etc/config/"
+"network<br />Names must match the interface name found in /etc/config/"
+"network (see advanced tab)<br />Names may contain characters A-Z, a-z, 0-9, "
+"_ and no spaces<br />Interfaces may not share the same name as configured "
+"members, policies or rules"
+msgstr ""
+"MWAN supports up to 250 physical and/or logical interfaces<br />MWAN "
+"requires that all interfaces have a unique metric configured in /etc/config/"
+"network<br />Names must match the interface name found in /etc/config/"
+"network (see advanced tab)<br />Names may contain characters A-Z, a-z, 0-9, "
+"_ and no spaces<br />Interfaces may not share the same name as configured "
+"members, policies or rules"
+
+msgid "Tracking IP"
+msgstr "Tracking IP"
+
+msgid "Tracking reliability"
+msgstr "Tracking reliability"
+
+msgid "Ping count"
+msgstr "Ping count"
+
+msgid "Ping timeout"
+msgstr "Ping timeout"
+
+msgid "Interface down"
+msgstr "Interface down"
+
+msgid "Ping interval"
+msgstr "Ping interval"
+
+msgid "Interface up"
+msgstr "Interface up"
+
+msgid "Errors"
+msgstr "Errors"
+
+msgid "MWAN Member Configuration"
+msgstr "MWAN Member Configuration"
+
+msgid ""
+"Members are profiles attaching a metric and weight to an MWAN interface<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces<br />Members "
+"may not share the same name as configured interfaces, policies or rules"
+msgstr ""
+"Members are profiles attaching a metric and weight to an MWAN interface<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces<br />Members "
+"may not share the same name as configured interfaces, policies or rules"
+
+msgid "Member"
+msgstr "Member"
+
+msgid "Weight"
+msgstr "Weight"
+
+msgid "MWAN Interface Configuration -"
+msgstr "MWAN Interface Configuration -"
+
+msgid "MWAN Member Configuration -"
+msgstr "MWAN Member Configuration -"
+
+msgid "Acceptable values: 1-1000. Defaults to 1 if not set"
+msgstr "Acceptable values: 1-1000. Defaults to 1 if not set"
+
+msgid "Currently Configured Interfaces"
+msgstr "Currently Configured Interfaces"
+
+msgid ""
+"This IP address will be pinged to dermine if the link is up or down. Leave "
+"blank to assume interface is always online"
+msgstr ""
+"This IP address will be pinged to dermine if the link is up or down. Leave "
+"blank to assume interface is always online"
+
+msgid ""
+"Acceptable values: 1-100. This many Tracking IP addresses must respond for "
+"the link to be deemed up"
+msgstr ""
+"Acceptable values: 1-100. This many Tracking IP addresses must respond for "
+"the link to be deemed up"
+
+msgid "Interface will be deemed down after this many failed ping tests"
+msgstr "Interface will be deemed down after this many failed ping tests"
+
+msgid ""
+"Downed interface will be deemed up after this many successful ping tests"
+msgstr ""
+"Downed interface will be deemed up after this many successful ping tests"
+
+msgid ""
+"This displays the metric assigned to this interface in /etc/config/network"
+msgstr ""
+"This displays the metric assigned to this interface in /etc/config/network"
+
+msgid "MWAN Policy Configuration"
+msgstr "MWAN Policy Configuration"
+
+msgid ""
+"Policies are profiles grouping one or more members controlling how MWAN "
+"distributes traffic<br />Member interfaces with lower metrics are used "
+"first. Interfaces with the same metric load-balance<br />Load-balanced "
+"member interfaces distribute more traffic out those with higher weights<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces. Names must be "
+"15 characters or less<br />Policies may not share the same name as "
+"configured interfaces, members or rules"
+msgstr ""
+"Policies are profiles grouping one or more members controlling how MWAN "
+"distributes traffic<br />Member interfaces with lower metrics are used "
+"first. Interfaces with the same metric load-balance<br />Load-balanced "
+"member interfaces distribute more traffic out those with higher weights<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces. Names must be "
+"15 characters or less<br />Policies may not share the same name as "
+"configured interfaces, members or rules"
+
+msgid "Members assigned"
+msgstr "Members assigned"
+
+msgid "Policy"
+msgstr "Policy"
+
+msgid "MWAN Policy Configuration -"
+msgstr "MWAN Policy Configuration -"
+
+msgid "Member used"
+msgstr "Member used"
+
+msgid "Currently Configured Members"
+msgstr "Currently Configured Members"
+
+msgid "Last resort"
+msgstr "Last resort"
+
+msgid ""
+"When all policy members are offline use this behavior for matched traffic"
+msgstr ""
+"When all policy members are offline use this behavior for matched traffic"
+
+msgid "MWAN Rule Configuration"
+msgstr "MWAN Rule Configuration"
+
+msgid "MWAN Traffic Rule Configuration -"
+msgstr "MWAN Traffic Rule Configuration -"
+
+msgid ""
+"Rules specify which traffic will use a particular MWAN policy based on IP "
+"address, port or protocol<br />Rules are matched from top to bottom. Rules "
+"below a matching rule are ignored. Traffic not matching any rule is routed "
+"using the main routing table<br />Traffic destined for known (other than "
+"default) networks is handled by the main routing table. Traffic matching a "
+"rule, but all WAN interfaces for that policy are down will be blackholed<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces<br />Rules may "
+"not share the same name as configured interfaces, members or policies"
+msgstr ""
+"Rules specify which traffic will use a particular MWAN policy based on IP "
+"address, port or protocol<br />Rules are matched from top to bottom. Rules "
+"below a matching rule are ignored. Traffic not matching any rule is routed "
+"using the main routing table<br />Traffic destined for known (other than "
+"default) networks is handled by the main routing table. Traffic matching a "
+"rule, but all WAN interfaces for that policy are down will be blackholed<br /"
+">Names may contain characters A-Z, a-z, 0-9, _ and no spaces<br />Rules may "
+"not share the same name as configured interfaces, members or policies"
+
+msgid "Policy assigned"
+msgstr "Policy assigned"
+
+msgid "Currently Configured Policies"
+msgstr "Currently Configured Policies"
+
+msgid "Source address"
+msgstr "Source address"
+
+msgid "Supports CIDR notation (eg \"192.168.100.0/24\") without quotes"
+msgstr "Supports CIDR notation (eg \"192.168.100.0/24\") without quotes"
+
+msgid "Source port"
+msgstr "Source port"
+
+msgid "Destination address"
+msgstr "Destination address"
+
+msgid "Destination port"
+msgstr "Destination port"
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "View the contents of /etc/protocols for protocol descriptions"
+msgstr "View the contents of /etc/protocols for protocol descriptions"
+
+msgid "Sticky"
+msgstr "Sticky"
+
+msgid ""
+"Traffic from the same source IP address that previously matched this rule "
+"within the sticky timeout period will use the same WAN interface"
+msgstr ""
+"Traffic from the same source IP address that previously matched this rule "
+"within the sticky timeout period will use the same WAN interface"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
+
+msgid "Sticky timeout"
+msgstr "Sticky timeout"
+
+msgid "IPset"
+msgstr "IPset"
+
+msgid ""
+"Name of IPset rule. Requires IPset rule in /etc/dnsmasq.conf (eg \"ipset=/"
+"youtube.com/youtube\")"
+msgstr ""
+"Name of IPset rule. Requires IPset rule in /etc/dnsmasq.conf (eg \"ipset=/"
+"youtube.com/youtube\")"
+
+msgid "unreachable (reject)"
+msgstr "unreachable (reject)"
+
+msgid "blackhole (drop)"
+msgstr "blackhole (drop)"
+
+msgid "default (use main routing table)"
+msgstr "default (use main routing table)"
+
+msgid ""
+"May be entered as a single or multiple port(s) (eg \"22\" or \"80,443\") or "
+"as a portrange (eg \"1024:2048\") without quotes"
+msgstr ""
+"May be entered as a single or multiple port(s) (eg \"22\" or \"80,443\") or "
+"as a portrange (eg \"1024:2048\") without quotes"
+
+msgid "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
+msgstr "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
+
+msgid "This section allows you to modify the contents of /etc/hotplug.d/iface/16-mwancustom<br />"
+	"This is useful for running system commands and/or scripts based on interface ifup or ifdown hotplug events<br /><br />"
+	"Notes:<br />"
+	"The first line of the script must be &#34;#!/bin/sh&#34; without quotes<br />"
+	"Lines beginning with # are comments and are not executed<br /><br />"
+	"Available variables:<br />"
+	"$ACTION is the hotplug event (ifup, ifdown)<br />"
+	"$INTERFACE is the interface name (wan1, wan2, etc.)<br />"
+	"$DEVICE is the device name attached to the interface (eth0.1, eth1, etc.)"
+msgstr "This section allows you to modify the contents of /etc/hotplug.d/iface/16-mwancustom<br />"
+	"This is useful for running system commands and/or scripts based on interface ifup or ifdown hotplug events<br /><br />"
+	"Notes:<br />"
+	"The first line of the script must be &#34;#!/bin/sh&#34; without quotes<br />"
+	"Lines beginning with # are comments and are not executed<br /><br />"
+	"Available variables:<br />"
+	"$ACTION is the hotplug event (ifup, ifdown)<br />"
+	"$INTERFACE is the interface name (wan1, wan2, etc.)<br />"
+	"$DEVICE is the device name attached to the interface (eth0.1, eth1, etc.)"
+
+msgid "Restore default hotplug script"
+msgstr "Restore default hotplug script"
+
+msgid "This section allows you to modify the contents of /etc/config/mwan3"
+msgstr "This section allows you to modify the contents of /etc/config/mwan3"
+
+msgid "This section allows you to modify the contents of /etc/config/network"
+msgstr "This section allows you to modify the contents of /etc/config/network"
+
+
+

@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Last-Translator: twxl1993 <twxl1993@gmail.com>\n"
+"Language-Team: twxl1993 <twxl1993@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-cn\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Project-Id-Version: \n"
+
+msgid "Virtual WAN"
+msgstr "虚拟WAN接口"
+
+msgid "Create virtual WAN interfaces"
+msgstr "创建虚拟WAN接口"
+
+msgid ""
+"Here you can create some virtual WAN interfaces with MACVLAN driver.Set wan "
+"metric first!<br />Connected interface count: "
+msgstr ""
+"在这里，你可以使用Macvlan驱动创建虚拟WAN接口。请务必先设置WAN口的网关跃点(通"
+"常可以填写 40)。<br />已连接的WAN接口数量："
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Number of virtual WAN"
+msgstr "虚拟WAN接口数量"
+
+msgid "Use WAN to diag"
+msgstr "使用 WAN 拨号"
+
+msgid "Uncheck this if you use a VLAN interface."
+msgstr "当你使用 VLAN 接口时请去除此勾"
+
+msgid "Enable auto reconnect"
+msgstr "断线自动重连"
+
+msgid "Minimnum connected interface"
+msgstr "最低在线接口数"
+
+msgid "Rediag if the number of connected interfaces is less then this."
+msgstr " 如果在线接口数低于这个数值，将会自动重新拨号。"
+
+msgid "rediag"
+msgstr "重新并发拨号"

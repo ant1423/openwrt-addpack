@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: twxl1993 <twxl1993@gmail.com>\n"
+"Language-Team: twxl1993 <twxl1993@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+
+msgid "Virtual WAN"
+msgstr "Virtual WAN"
+
+msgid "Create virtual WAN interfaces"
+msgstr "Create virtual WAN interfaces"
+
+msgid "Here you can create some virtual WAN interfaces with MACVLAN driver.Set wan metric first!<br />Connected interface count: "
+msgstr "Here you can create some virtual WAN interfaces with MACVLAN driver.Set wan metric first!<br />Connected interface count: "
+
+msgid "Enable"
+msgstr "Enable"
+
+msgid "Number of virtual WAN"
+msgstr "Number of virtual WAN"
+
+msgid "Use WAN to diag"
+msgstr "Use WAN to diag"
+
+msgid "Uncheck this if you use a VLAN interface."
+msgstr "Uncheck this if you use a VLAN interface."
+
+msgid "Enable auto reconnect"
+msgstr "Enable auto reconnect"
+
+msgid "Minimnum connected interface"
+msgstr "Minimnum connected interface"
+
+msgid "Rediag if the number of connected interfaces is less then this."
+msgstr "Rediag if the number of connected interfaces is less then this."
+
+msgid "rediag"
+msgstr "rediag"

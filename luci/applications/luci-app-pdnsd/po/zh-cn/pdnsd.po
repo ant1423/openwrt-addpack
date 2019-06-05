@@ -1,0 +1,152 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "pdnsd"
+msgstr "DNS代理服务器"
+
+msgid "global Section"
+msgstr "global 部分"
+
+msgid "server Section"
+msgstr "server 部分"
+
+msgid "source Section"
+msgstr "source 部分"
+
+msgid "Status Control"
+msgstr "状态控制"
+
+msgid "Status Control desc"
+msgstr "默认关闭。"
+
+msgid "Local IP"
+msgstr "本地地址"
+
+msgid "any"
+msgstr "任何"
+
+msgid "Local IP desc"
+msgstr "pdnsd监听的本地地址."
+
+msgid "Local Port"
+msgstr "本地端口"
+
+msgid "Local Port desc"
+msgstr "pdnsd监听的本地端口."
+
+msgid "Perm Cache"
+msgstr "缓存大小"
+
+msgid "Perm Cache desc"
+msgstr "关闭缓存或者提供最大的缓存容量(单位：kB)"
+
+msgid "off"
+msgstr "关闭"
+
+msgid "Min TTL"
+msgstr "最小缓存TTL"
+
+msgid "Min TTL desc"
+msgstr "保存DNS记录的最短时间(单位: s)"
+
+msgid "Max TTL"
+msgstr "最大缓存TTL"
+
+msgid "Max TTL desc"
+msgstr "保存DNS记录的最长时间(单位: s)"
+
+msgid "Query Method"
+msgstr "查询方式"
+
+msgid "udp_tcp"
+msgstr "udp(优先)及tcp"
+
+msgid "tcp_udp"
+msgstr "tcp(优先)及udp"
+
+msgid "udp_only"
+msgstr "仅 udp"
+
+msgid "tcp_only"
+msgstr "仅 tcp"
+
+msgid "Timeout"
+msgstr "超时时间"
+
+msgid "Timeout desc"
+msgstr "DNS查询的全局超时时间"
+
+msgid "Cache Directory"
+msgstr "缓存路径"
+
+msgid "Cache Directory desc"
+msgstr "用来保存DNS缓存的目录"
+
+msgid "UDP Buffer Size"
+msgstr "UDP包大小"
+
+msgid "UDP Buffer Size desc"
+msgstr "UDP DNS消息的包大小上限，默认为 1024"
+
+msgid "DNS Server IP"
+msgstr "远程DNS地址"
+
+msgid "DNS Server IP desc"
+msgstr "多个IP可以使用逗号分隔开 例如: ip,ip,ip"
+
+msgid "Google public DNS"
+msgstr "谷歌公共DNS"
+
+msgid "OpenDNS"
+msgstr "OpenDNS"
+
+msgid "114DNS"
+msgstr "114DNS"
+
+msgid "AliDNS"
+msgstr "阿里DNS"
+
+msgid "BaiduDNS"
+msgstr "百度DNS"
+
+msgid "DNS Server Port"
+msgstr "远程DNS端口"
+
+msgid "DNS Server Port desc"
+msgstr "远程DNS地址的监听端口. 默认: 53 (官方DNS端口)"
+
+msgid "resolv.conf"
+msgstr "解析配置文件"
+
+msgid "resolv.conf desc"
+msgstr "通过 resolv.conf 类型的文件获取上级DNS地址"
+
+msgid "Purge Cache"
+msgstr "清除过期缓存"
+
+msgid "EDNS Query"
+msgstr "EDNS 查询"
+
+msgid "EDNS Query desc"
+msgstr "对外查询DNS时是否启用扩展DNS机制"
+
+msgid "Label"
+msgstr "标签"
+
+msgid "Owner"
+msgstr "归属者"
+
+msgid "Owner desc"
+msgstr "指定主机上运行pdnsd以及返回指定的DNS记录(指定的域名服务器记录)."
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "TTL desc"
+msgstr "指定进入本入口之后的本部分所有资源记录存活时间"
+
+msgid "File"
+msgstr "文件"
+
+msgid "File desc"
+msgstr "Hosts文件"

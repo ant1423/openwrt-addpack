@@ -1,0 +1,13 @@
+
+config xunlei 'config'
+	option enable '0'
+	option device '/mnt/sda'
+	option up '0'
+	option file '/mnt/sda/xunlei'
+	option xware 'Xware_mipsel_32_uclibc.tar.gz'
+	option zversion '0'
+	option ver '1.0.31'
+	option vod '0'
+	option upxlast '1'
+	option url 'http://dl.lazyzhu.com/file/Thunder/Xware'
+

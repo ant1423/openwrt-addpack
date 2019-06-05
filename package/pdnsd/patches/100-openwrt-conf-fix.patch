@@ -1,0 +1,52 @@
+diff --git a/doc/pdnsd.conf.in b/doc/pdnsd.conf.in
+index e348eb0..2968523 100644
+--- a/doc/pdnsd.conf.in
++++ b/doc/pdnsd.conf.in
+@@ -4,18 +4,19 @@
+ // Remove '/*' and '*/' to enable complete sections.
+ 
+ global {
+-	perm_cache=1024;
++	perm_cache=2048;
+ 	cache_dir="@cachedir@";
+ #	pid_file = /var/run/pdnsd.pid;
+ 	run_as="@def_id@";
+-	server_ip = 127.0.0.1;  # Use eth0 here if you want to allow other
++	server_ip = any;  # Use eth0 here if you want to allow other
+ 				# machines on your network to query pdnsd.
++	server_port=5353;
+ 	status_ctl = on;
+ #	paranoid=on;       # This option reduces the chance of cache poisoning
+ 	                   # but may make pdnsd less efficient, unfortunately.
+ 	query_method=udp_tcp;
+-	min_ttl=15m;       # Retain cached entries at least 15 minutes.
+-	max_ttl=1w;        # One week.
++	min_ttl=1440m;       # Retain cached entries at least 15 minutes.
++	max_ttl=2w;        # Two week.
+ 	timeout=10;        # Global timeout option (10 seconds).
+ 	neg_domain_pol=on;
+ 	udpbufsize=1024;   # Upper limit on the size of UDP messages.
+@@ -24,17 +25,18 @@ global {
+ # The following section is most appropriate if you have a fixed connection to
+ # the Internet and an ISP which provides good DNS servers.
+ server {
+-	label= "myisp";
+-	ip = 192.168.0.1;  # Put your ISP's DNS-server address(es) here.
++	label= "openwrt";
++#	ip = 192.168.0.1;  # Put your ISP's DNS-server address(es) here.
+ #	proxy_only=on;     # Do not query any name servers beside your ISP's.
+ 	                   # This may be necessary if you are behind some
+ 	                   # kind of firewall and cannot receive replies
+ 	                   # from outside name servers.
++	file="/etc/ppp/resolv.conf";
+ 	timeout=4;         # Server timeout; this may be much shorter
+ 			   # that the global timeout option.
+-	uptest=if;         # Test if the network interface is active.
+-	interface=eth0;    # The name of the interface to check.
+-	interval=10m;      # Check every 10 minutes.
++	uptest=none;         # Test if the network interface is active.
++#	interface=eth0;    # The name of the interface to check.
++#	interval=10m;      # Check every 10 minutes.
+ 	purge_cache=off;   # Keep stale cache entries in case the ISP's
+ 			   # DNS servers go offline.
+ 	edns_query=yes;    # Use EDNS for outgoing queries to allow UDP messages

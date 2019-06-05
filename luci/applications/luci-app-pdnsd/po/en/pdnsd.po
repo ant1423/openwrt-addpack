@@ -1,0 +1,168 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "pdnsd"
+msgstr "pdnsd"
+
+msgid "global Section"
+msgstr "global Section"
+
+msgid "server Section"
+msgstr "server Section"
+
+msgid "source Section"
+msgstr "source Section"
+
+msgid "rr Section"
+msgstr "rr Section"
+
+msgid "neg Section"
+msgstr "neg Section"
+
+msgid "include Section"
+msgstr "include Section"
+
+msgid "Status Control"
+msgstr "Status Control"
+
+msgid "Status Control desc"
+msgstr "It is disabled by default."
+
+msgid "Local IP"
+msgstr "Local IP"
+
+msgid "any"
+msgstr "any"
+
+msgid "Local IP desc"
+msgstr "The IP address pdnsd listens on for requests."
+
+msgid "Local Port"
+msgstr "Local Port"
+
+msgid "Local Port desc"
+msgstr "The server port."
+
+msgid "Perm Cache"
+msgstr "Perm Cache"
+
+msgid "Perm Cache desc"
+msgstr "Switch the disk cache off or supply a maximum cache size in kB."
+
+msgid "off"
+msgstr "off"
+
+msgid "Min TTL"
+msgstr "Min Cache TTL"
+
+msgid "Min TTL desc"
+msgstr "The minimum time a record is held in cache."
+
+msgid "Max TTL"
+msgstr "Max Cache TTL"
+
+msgid "Max TTL desc"
+msgstr "The maximum time a record is held in cache "
+
+msgid "Query Method"
+msgstr "Query Method"
+
+msgid "udp_tcp"
+msgstr "udp_tcp"
+
+msgid "tcp_udp"
+msgstr "tcp_udp"
+
+msgid "udp_only"
+msgstr "udp_only"
+
+msgid "tcp_only"
+msgstr "tcp_only"
+
+msgid "Timeout"
+msgstr "Timeout"
+
+msgid "Timeout desc"
+msgstr "The global timeout parameter for dns queries."
+
+msgid "Cache Directory"
+msgstr "Cache Directory"
+
+msgid "Cache Directory desc"
+msgstr "The directory you want to keep the cache in."
+
+msgid "UDP Buffer Size"
+msgstr "UDP Buffer Size"
+
+msgid "UDP Buffer Size desc"
+msgstr "The upper limit on the size of UDP DNS messages. The default is 1024."
+
+msgid "DNS Server IP"
+msgstr "DNS Server IP"
+
+msgid "DNS Server IP desc"
+msgstr "Multiple IP addresses can be given per server section. example: ip,ip,ip"
+
+msgid "Google public DNS"
+msgstr "Google public DNS"
+
+msgid "OpenDNS"
+msgstr "OpenDNS"
+
+msgid "114DNS"
+msgstr "114DNS"
+
+msgid "AliDNS"
+msgstr "AliDNS"
+
+msgid "BaiduDNS"
+msgstr "BaiduDNS"
+
+msgid "DNS Server Port"
+msgstr "DNS Server Port"
+
+msgid "DNS Server Port desc"
+msgstr "The port the remote name server listens on. Default is 53 (the official dns port)"
+
+msgid "resolv.conf"
+msgstr "resolv.conf"
+
+msgid "resolv.conf desc"
+msgstr "This option allows you to give the name of a resolv.conf-style file."
+
+msgid "Purge Cache"
+msgstr "Purge Cache"
+
+msgid "EDNS Query"
+msgstr "EDNS Query"
+
+msgid "EDNS Query"
+msgstr "Specifies whether to use EDNS (Extension mechanisms for DNS) for outgoing queries."
+
+msgid "Label"
+msgstr "Label"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name desc"
+msgstr "Specifies the name of the resource records, i.e. the domain name of the resource the record describes."
+
+msgid "Owner"
+msgstr "Owner"
+
+msgid "Owner desc"
+msgstr "Specifies the name of the host pdnsd runs on and that are specified in dns answers (specifically, nameserver records)."
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "TTL desc"
+msgstr "Specifies the ttl (time to live) for all resource records in this section after this entry."
+
+msgid "File"
+msgstr "File"
+
+msgid "File desc"
+msgstr "Hosts file."
+

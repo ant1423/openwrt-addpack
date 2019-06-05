@@ -1,0 +1,44 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+NAME=automemc
+DESC="Auto memory cleanup"
+
+DAEMON=/usr/sbin/automemc
+PID_FILE=/var/run/$NAME.pid
+
+automemc() {
+	local cfg="$1"
+	local enable minval frequency
+	local total critical actual
+
+	config_get_bool enable "$cfg" enable 0
+	[ $enable == 0 ] && exit 1
+
+	config_get minval "$cfg" minval 10
+	config_get frequency "$cfg" frequency 30
+
+	echo -n "Starting $DESC: $NAME"
+	$DAEMON -p $PID_FILE -m $minval -f $frequency &
+	echo " ."
+}
+
+start() {
+	config_load automemc
+	config_foreach automemc automemc
+}
+
+stop() {
+	echo -n "Stopping $DESC: $NAME"
+	kill `cat $PID_FILE` > /dev/null 2>&1
+	rm -rf $PID_FILE
+	echo " ."
+}
+
+restart() {
+	echo "Restarting $DESC: $NAME... "
+	stop
+	sleep 1
+	start
+}
+                                                

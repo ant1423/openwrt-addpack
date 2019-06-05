@@ -1,0 +1,180 @@
+#!/bin/sh /etc/rc.common
+
+START=65
+NAME=pdnsd
+DESC="proxy DNS server"
+
+DAEMON=/usr/sbin/pdnsd
+PID_FILE=/var/run/$NAME.pid
+CACHEDIR=/var/pdnsd
+CONFIGFILE="/var/pdnsd.conf"
+
+USER="nobody"
+GROUP="nogroup"
+
+# --pid_file="/etc/run/pdnsd.pid";
+xappend() {
+	local value="$1"
+
+	echo -e "\t${value#--};" >> $CONFIGFILE
+}
+
+append_bool() {
+	local section="$1"
+	local option="$2"
+	local value="$3"
+	local _loctmp
+	config_get_bool _loctmp "$section" "$option" 0
+	if [ $_loctmp -gt 0 ]; then
+		xappend "$value="on""
+	else
+		xappend "$value="off""
+	fi
+}
+
+append_parm() {
+	local section="$1"
+	local option="$2"
+	local switch="$3"
+	local _loctmp
+	config_get _loctmp "$section" "$option"
+	[ -z "$_loctmp" ] && return 0
+	xappend "$switch="$_loctmp""
+}
+
+start_section() {
+	local section="$1"
+	echo "${section} {" >> $CONFIGFILE
+}
+
+end_section() {
+	echo "}" >> $CONFIGFILE
+	echo >> $CONFIGFILE
+}
+
+#config pdnsd
+#	option server_ip any
+#	option server_port 5353
+#	option perm_cache 2048
+#	option cache_dir '/var/pdnsd'
+#	option run_as 'nobody'
+#	option status_ctl 1
+#	option query_method udp_tcp
+#	option min_ttl 1w
+#	option max_ttl 2w
+#	option timeout 10
+#	option udpbufsize 1024
+pdnsd() {
+	local cfg="$1"
+
+	start_section "global"
+
+	append_bool "$cfg" status_ctl "--status_ctl"
+
+	append_parm "$cfg" server_ip "--server_ip"
+	append_parm "$cfg" server_port "--server_port"
+	append_parm "$cfg" perm_cache "--perm_cache"
+	append_parm "$cfg" cache_dir "--cache_dir"
+	append_parm "$cfg" run_as "--run_as"
+	append_parm "$cfg" min_ttl "--min_ttl"
+	append_parm "$cfg" max_ttl "--max_ttl"
+	append_parm "$cfg" query_method "--query_method"
+	append_parm "$cfg" timeout "--timeout"
+	append_parm "$cfg" udpbufsize "--udpbufsize"
+
+	end_section
+}
+
+#config server
+#	option label 'openwrt'
+#	#option ip   '114.114.114.114'
+#	#option port  '53'
+#	option file  '/etc/ppp/resolv.conf'
+#	option timeout 10
+#	option uptest  none
+#	option purge_cache 0
+#	option edns_query 1
+load_server() {
+	local cfg="$1"
+
+	start_section "server"
+
+	append_bool "$cfg" purge_cache "--purge_cache"
+	append_bool "$cfg" edns_query "--edns_query"
+	
+	append_parm "$cfg" label "--label"
+	append_parm "$cfg" ip "--ip"
+	append_parm "$cfg" port "--port"
+	append_parm "$cfg" file "--file"
+	append_parm "$cfg" uptest "--uptest"
+
+	end_section
+}
+
+#config source
+#	option owner localhost
+#	option ttl 86400
+#	option file '/etc/hosts'
+load_source() {
+	local cfg="$1"
+
+	start_section "source"
+
+	append_parm "$cfg" owner "--owner"
+	append_parm "$cfg" ttl "--ttl"
+	append_parm "$cfg" file "--file"
+
+	end_section
+}
+
+start() {
+	[ -f $PID_FILE ] && grep -q $NAME /proc/`cat $PID_FILE`/cmdline > /dev/null 2>&1 && {
+		echo "Already running."
+		exit 1
+	}
+
+	echo "# auto-generated config file from /etc/config/pdnsd" > $CONFIGFILE
+	echo >> $CONFIGFILE
+
+	config_load pdnsd
+	if [ $? == 0 ]; then
+		config_foreach pdnsd pdnsd
+		config_foreach load_server server
+		config_foreach load_source source
+	else
+		cat /etc/pdnsd.conf > $CONFIGFILE
+	fi
+
+	echo -n "Starting $DESC: $NAME"
+
+	gen_cache $CACHEDIR $USER $GROUP
+
+	$DAEMON --daemon --config-file $CONFIGFILE -p $PID_FILE
+}
+
+stop() {
+	echo -n "Stopping $DESC: $NAME"
+	kill `cat $PID_FILE` > /dev/null 2>&1
+	rm -rf $PID_FILE
+	echo " ."
+}
+
+restart() {
+	echo "Restarting $DESC: $NAME... "
+	stop
+	sleep 1
+	start
+}
+
+gen_cache()
+{
+	local cachedir="$1"
+	local user="$2"
+	local group="$3"
+	local cache="$cachedir/pdnsd.cache"
+	if [ ! -f "$cache" ]; then
+		mkdir -p $cachedir
+		dd if=/dev/zero of="$cache" bs=1 count=4 2> /dev/null
+		chown -R $user:$group $cachedir
+	fi
+}
