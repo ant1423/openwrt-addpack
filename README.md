@@ -1,2 +1,2 @@
 # openwrt-addpack
-Some packages for openwrt chaos calmer.
+Some packages for openwrt chaos calmer.(Deprecated)
